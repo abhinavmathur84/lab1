@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tumblr/PhotosViewController.swift"
+            timestampString = "490240168.730273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr.PhotosViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Tumblr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amathu4/GitHub/lab1/Tumblr/Tumblr/PhotosViewController.swift"
+                  timestampString = "490237430.84847"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1072">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr.PhotosViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "Tumblr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amathu4/GitHub/lab1/Tumblr/Tumblr/PhotosViewController.swift"
+                  timestampString = "490237430.848617"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
