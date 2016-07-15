@@ -79,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="czn-kn-PfK">
-                                <rect key="frame" x="40" y="234" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="185" width="320" height="322"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
                             </imageView>

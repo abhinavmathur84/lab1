@@ -70,7 +70,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 if let p = photos[0] as? NSDictionary {
                     if let orgImg = p["original_size"] as? NSDictionary {
                         if let url = orgImg["url"] as? String {
-                           cell.tumblrImage.setImageWithURL(NSURL(fileURLWithPath: url))
+                           cell.tumblrImage.setImageWithURL(NSURL(string: url)!)
                            cell.titleLabel.text = url
                         }
                     }
@@ -95,9 +95,22 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Pass the selected object to the new view controller.
         var vc = segue.destinationViewController as! PhotoDetailsViewController
         if let indexPath = myTableView.indexPathForCell(sender as! UITableViewCell) {
-            if let temp = posts[indexPath.row]["image_permalink"] as? String {
-                vc.text = temp
+            if let temp = posts[indexPath.row] as? NSDictionary {
+                //NSLog("temp:\(temp)")
+                if let photos = temp["photos"] as? [AnyObject] {
+                    NSLog("photos:\(photos)")
+                    if let p = photos[0] as? NSDictionary {
+                        if let orgImg = p["original_size"] as? NSDictionary {
+                            if let url = orgImg["url"] as? String {
+                                vc.text = url;
+                            }
+                        }
+                    }
+                }
+            } else {
+                NSLog("temp is null");
             }
+
         }
     }
     
