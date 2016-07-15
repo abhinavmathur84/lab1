@@ -39,7 +39,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
                                                                                     if let temp = resp["posts"] as? [NSDictionary] {
                                                                                         self.posts = temp;
                                                                                         self.myTableView.reloadData()
-                                                                                       // NSLog("posts:\(self.posts)")
+                                                                                        //NSLog("posts:\(self.posts)")
                                                                                     }
                                                                                     
                                                                                 }
@@ -61,10 +61,23 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-                let cell = myTableView.dequeueReusableCellWithIdentifier("TumblrViewCell", forIndexPath: indexPath) as! TumblrViewCell
-        if let temp = posts[indexPath.row]["image_permalink"] as? String {
-             cell.titleLabel.text = temp
-            cell.tumblrImage.setImageWithURL(NSURL(string : temp)!)
+        let cell = myTableView.dequeueReusableCellWithIdentifier("TumblrViewCell", forIndexPath: indexPath) as! TumblrViewCell
+       // NSLog("1\n: \(posts[indexPath.row])")
+        if let temp = posts[indexPath.row] as? NSDictionary {
+            //NSLog("temp:\(temp)")
+            if let photos = temp["photos"] as? [AnyObject] {
+                NSLog("photos:\(photos)")
+                if let p = photos[0] as? NSDictionary {
+                    if let orgImg = p["original_size"] as? NSDictionary {
+                        if let url = orgImg["url"] as? String {
+                           cell.tumblrImage.setImageWithURL(NSURL(fileURLWithPath: url))
+                           cell.titleLabel.text = url
+                        }
+                    }
+                 }
+            }
+        } else {
+           NSLog("temp is null");
         }
         return cell
     }
